@@ -2,6 +2,7 @@
 const nextConfig = {
   output: 'export',
   basePath: '/heedong-profile-doubletea',
+  assetPrefix: '/heedong-profile-doubletea',
   typescript: {
     ignoreBuildErrors: true,
   },
