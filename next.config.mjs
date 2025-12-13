@@ -1,8 +1,11 @@
 /** @type {import('next').NextConfig} */
+const isProduction = process.env.NODE_ENV === 'production'
+const basePath = isProduction ? '/heedong-profile-doubletea' : ''
+
 const nextConfig = {
-  output: 'export',
-  basePath: '/heedong-profile-doubletea',
-  assetPrefix: '/heedong-profile-doubletea',
+  ...(isProduction && { output: 'export' }),
+  ...(basePath && { basePath }),
+  ...(basePath && { assetPrefix: basePath }),
   typescript: {
     ignoreBuildErrors: true,
   },

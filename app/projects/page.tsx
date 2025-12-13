@@ -185,16 +185,16 @@ export default function ProjectsPage() {
 
       <PortfolioSidebar />
 
-      <main className="flex-1 px-4 py-12 overflow-y-auto relative z-10">
+      <main className="flex-1 px-3 sm:px-4 py-6 sm:py-8 md:py-12 overflow-y-auto relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">프로젝트</h1>
-            <p className="text-lg text-muted-foreground">제가 진행한 주요 프로젝트들을 소개합니다.</p>
+          <div className="mb-6 sm:mb-8 md:mb-12">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 sm:mb-3 md:mb-4">프로젝트</h1>
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground">제가 진행한 주요 프로젝트들을 소개합니다.</p>
           </div>
 
           {/* Projects Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
             {projects.map((project, index) => (
               <Dialog key={index}>
                 <DialogTrigger asChild>
@@ -243,12 +243,12 @@ export default function ProjectsPage() {
                   </Card>
                 </DialogTrigger>
 
-                <DialogContent className="max-w-[1100px] w-[90vw] max-h-[90vh] overflow-y-auto custom-scrollbar border-none rounded-sm break-keep p-10">
-                  <div className="grid md:grid-cols-2 gap-8">
+                <DialogContent className="max-w-[1100px] w-[95vw] sm:w-[90vw] max-h-[95vh] sm:max-h-[90vh] overflow-y-auto custom-scrollbar border-none rounded-sm break-keep p-4 sm:p-6 md:p-10">
+                  <div className="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
                     {/* 왼쪽: 사진, 기간, 팀 구성, 역할, 주요 기능, 기술 스택 */}
                     <div className="space-y-6">
                       {/* Project Image */}
-                      <div className="relative h-72 bg-muted rounded-lg overflow-hidden">
+                      <div className="relative h-48 sm:h-64 md:h-72 bg-muted rounded-lg overflow-hidden">
                         <Image
                           src={project.image || `${BASE_PATH}/placeholder.svg`}
                           alt={project.title}
@@ -258,41 +258,41 @@ export default function ProjectsPage() {
                       </div>
 
                       {/* Project Info */}
-                      <div className="space-y-3 text-sm">
-                        <div className="flex items-center gap-6">
+                      <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
+                        <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6">
                           <div className="flex items-center gap-2">
                             <span className="font-semibold text-primary">기간:</span>
-                            <span>{project.details.period}</span>
+                            <span className="break-all">{project.details.period}</span>
                           </div>
                           <div className="flex items-center gap-2">
                             <span className="font-semibold text-primary">팀 구성:</span>
                             <span>{project.details.team}</span>
                           </div>
                         </div>
-                        <div className="flex gap-2">
+                        <div className="flex flex-col sm:flex-row gap-2">
                           <span className="font-semibold text-primary shrink-0">역할:</span>
-                          <span className="whitespace-pre-line">{project.details.role}</span>
+                          <span className="whitespace-pre-line break-keep">{project.details.role}</span>
                         </div>
                       </div>
 
                       {/* Features */}
                       <div>
-                        <h3 className="font-semibold text-lg mb-3 text-primary">주요 기능</h3>
-                        <ul className="space-y-2 text-muted-foreground text-sm list-disc list-inside">
+                        <h3 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-primary">주요 기능</h3>
+                        <ul className="space-y-1 sm:space-y-2 text-muted-foreground text-xs sm:text-sm list-disc list-inside">
                           {project.details.features.map((feature, i) => (
-                            <li key={i}>{feature}</li>
+                            <li key={i} className="break-keep">{feature}</li>
                           ))}
                         </ul>
                       </div>
 
                       {/* Tech Stack */}
                       <div>
-                        <h3 className="font-semibold text-lg mb-3 text-primary">기술 스택</h3>
-                        <div className="flex flex-wrap gap-2">
+                        <h3 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-primary">기술 스택</h3>
+                        <div className="flex flex-wrap gap-1.5 sm:gap-2">
                           {project.details.techStack.map((tech) => (
                             <span
                               key={tech}
-                              className="px-3 py-1 rounded-full text-sm font-medium bg-blue-500/20 text-blue-400 border border-blue-500/30"
+                              className="px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-xs sm:text-sm font-medium bg-blue-500/20 text-blue-400 border border-blue-500/30"
                             >
                               {tech}
                             </span>
@@ -302,14 +302,14 @@ export default function ProjectsPage() {
                     </div>
 
                     {/* 오른쪽: 프로젝트 제목, 설명, 성과 */}
-                    <div className="space-y-6">
+                    <div className="space-y-4 sm:space-y-6">
                       {/* Title */}
-                      <h2 className="text-2xl font-bold">{project.title}</h2>
+                      <h2 className="text-xl sm:text-2xl font-bold break-keep">{project.title}</h2>
 
                       {/* Description */}
                       <div>
-                        <h3 className="font-semibold text-lg mb-3 text-primary">프로젝트 설명</h3>
-                        <p className="text-muted-foreground leading-relaxed whitespace-pre-line break-keep">{project.details.description}</p>
+                        <h3 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-primary">프로젝트 설명</h3>
+                        <p className="text-sm sm:text-base text-muted-foreground leading-relaxed whitespace-pre-line break-keep">{project.details.description}</p>
                       </div>
 
                       {/* Achievements */}
