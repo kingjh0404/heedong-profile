@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card"
 import { PortfolioSidebar } from "@/components/portfolio-sidebar"
 import { ResumeBackground } from "@/components/resume-background"
 import Image from "next/image"
+import { BASE_PATH } from "@/lib/constants"
 
 export default function ResumePage() {
   return (
@@ -37,7 +38,7 @@ WebSocket·WebRTC 기반 실시간 데이터 및 영상 스트리밍을 3D 환�
                 <div className="flex justify-center md:justify-end h-[380px]">
                   <div className="relative w-full h-full rounded-lg shadow-lg overflow-hidden">
                     <Image
-                      src="/jh2.png"
+                      src={`${BASE_PATH}/jh2.png`}
                       alt="프로필 사진"
                       fill
                       className="object-cover object-top"

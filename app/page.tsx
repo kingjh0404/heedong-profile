@@ -3,6 +3,7 @@ import { FileText, Briefcase, Pen, Target, Mail, Phone, ArrowRight } from "lucid
 import Link from "next/link"
 import Image from "next/image"
 import { ThreeDBackground } from "@/components/3d-background"
+import { BASE_PATH } from "@/lib/constants"
 
 export default function Page() {
   return (
@@ -59,7 +60,7 @@ export default function Page() {
             <div className="flex justify-center md:justify-end md:pr-8">
               <div className="relative w-48 h-64 md:w-56 md:h-72 overflow-hidden rounded-lg shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 group">
                 <Image
-                  src="/jh.png"
+                  src={`${BASE_PATH}/jh.png`}
                   alt="프로필 사진"
                   fill
                   className="object-cover"

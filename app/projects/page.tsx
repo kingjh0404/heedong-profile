@@ -5,13 +5,14 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
 import Image from "next/image"
 import { PortfolioSidebar } from "@/components/portfolio-sidebar"
 import { ResumeBackground } from "@/components/resume-background"
+import { BASE_PATH } from "@/lib/constants"
 
 export default function ProjectsPage() {
   const projects = [
     {
       title: "RIST 본원 방문객을 위한 실내 3D 안내 솔루션",
       description: "드론 기반 3D 모델링과 WebGL을 활용한 실시간 인터랙티브 안내 시스템",
-      image: "/rist_tour.png",
+      image: `${BASE_PATH}/rist_tour.png`,
       tags: ["React", "JavaScript", "Three.js", "Node.js", "WebGL", "3DGS"],
       link: "https://example.com",
       github: "https://github.com",
@@ -40,7 +41,7 @@ export default function ProjectsPage() {
     {
       title: "RIST 실험동 작업 안전 미리보기",
       description: "디지털 트윈 기반 작업 안전 교육 및 AI 안전 관리 시스템",
-      image: "/rist.png",
+      image: `${BASE_PATH}/rist.png`,
       tags: ["React", "WebGL", "JavaScript", "Three.js", "Node.js", "3DGS"],
       link: "https://example.com",
       github: "https://github.com",
@@ -69,7 +70,7 @@ export default function ProjectsPage() {
     {
       title: "포스코 포항제철소 3후판 설비 모니터링 시스템 개발",
       description: "제철소 설비의 실시간 상태를 모니터링하는 웹 기반 시스템",
-      image: "/industrial-monitoring-system.jpg",
+      image: `${BASE_PATH}/industrial-monitoring-system.jpg`,
       tags: ["React", "JavaScript", "WebGL", "WebSocket", "3DGS", "Node.js", "RTSP"],
       link: "https://example.com",
       github: "https://github.com",
@@ -88,7 +89,7 @@ export default function ProjectsPage() {
     {
       title: "포스코 포항제철소 로봇 관제 HMI 시스템 개발 (POSRX 관제)",
       description: "로봇 관제를 위한 HMI(Human-Machine Interface) 시스템",
-      image: "/robot-control-interface.jpg",
+      image: `${BASE_PATH}/robot-control-interface.jpg`,
       tags: ["React", "JavaScript", "Node.js", "MQTT", "WebRTC", "RTSP"],
       link: "https://example.com",
       github: "https://github.com",
@@ -107,7 +108,7 @@ export default function ProjectsPage() {
     {
       title: "사내 그룹웨어 차량 예약 시스템 개발",
       description: "사내 차량 예약 및 관리를 위한 그룹웨어 시스템",
-      image: "/vehicle-reservation-system.jpg",
+      image: `${BASE_PATH}/vehicle-reservation-system.jpg`,
       tags: ["React", "JavaScript", "Node.js", "flask"],
       link: "https://example.com",
       github: "https://github.com",
@@ -125,7 +126,7 @@ export default function ProjectsPage() {
     {
       title: "포스코 포항제철소 HUSKY 로봇과제 프로그램 개발",
       description: "HUSKY 로봇의 자동화 작업을 위한 제어 프로그램",
-      image: "/autonomous-robot-system.jpg",
+      image: `${BASE_PATH}/autonomous-robot-system.jpg`,
       tags: ["React", "JavaScript", "Node.js", "MQTT"],
       link: "https://example.com",
       github: "https://github.com",
@@ -143,7 +144,7 @@ export default function ProjectsPage() {
     {
       title: "포스코 포항제철소 철도 및 용선관제 프로그램 개발",
       description: "제철소 내 철도 및 용선 운행을 관제하는 시스템",
-      image: "/railway-control-system.jpg",
+      image: `${BASE_PATH}/railway-control-system.jpg`,
       tags: [ "React","Node.js", "JavaScript", "Three.js"],
       link: "https://example.com",
       github: "https://github.com",
@@ -161,7 +162,7 @@ export default function ProjectsPage() {
     {
       title: "포스코 포항제철소 TLC기차 단열커버 프로그램 개발",
       description: "TLC기차 단열커버 관리 및 모니터링 프로그램",
-      image: "/train-insulation-cover.jpg",
+      image: `${BASE_PATH}/train-insulation-cover.jpg`,
       tags: ["React", "JavaScript", "Node.js", "MongoDB"],
       link: "https://example.com",
       github: "https://github.com",
@@ -201,7 +202,7 @@ export default function ProjectsPage() {
                     {/* Project Image */}
                     <div className="relative h-48 bg-muted">
                       <Image
-                        src={project.image || "/placeholder.svg"}
+                        src={project.image || `${BASE_PATH}/placeholder.svg`}
                         alt={project.title}
                         fill
                         className="object-cover"
@@ -249,7 +250,7 @@ export default function ProjectsPage() {
                       {/* Project Image */}
                       <div className="relative h-72 bg-muted rounded-lg overflow-hidden">
                         <Image
-                          src={project.image || "/placeholder.svg"}
+                          src={project.image || `${BASE_PATH}/placeholder.svg`}
                           alt={project.title}
                           fill
                           className="object-cover"
