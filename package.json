@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "next build",
+    "build": "next build && npm run copy-to-docs",
+    "copy-to-docs": "powershell -Command \"if (Test-Path docs) { Remove-Item -Recurse -Force docs }; Copy-Item -Recurse -Force out docs\"",
     "dev": "next dev",
     "lint": "eslint .",
     "start": "next start"
