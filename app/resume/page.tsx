@@ -215,7 +215,7 @@ WebSocket·WebRTC 기반 실시간 데이터 및 영상 스트리밍을 3D 환�
               <ul className="space-y-2 sm:space-y-3">
                 <li className="flex justify-between items-center border-b border-border pb-2">
                   <span className="text-sm sm:text-base font-medium">오픽 (OPIc) IM2</span>
-                  <span className="text-xs sm:text-sm text-muted-foreground">2024.11</span>
+                  <span className="text-xs sm:text-sm text-muted-foreground">2025.01</span>
                 </li>
               </ul>
             </Card>
