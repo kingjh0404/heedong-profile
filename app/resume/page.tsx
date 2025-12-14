@@ -25,13 +25,17 @@ export default function ResumePage() {
                 <div className="space-y-3 sm:space-y-4">
                   <p className="text-sm sm:text-base md:text-lg leading-relaxed break-keep whitespace-pre-line">
                     {`저는 프론트엔드 중심의 풀스택 개발자로,
+
 React, Node.js, TypeScript, JavaScript를 기반으로 산업 현장의 니즈를 반영한 웹 애플리케이션을 개발해왔습니다.
 
-특히 Three.js·Babylon.js(WebGL)를 활용한 고성능 3D 웹 프론트엔드에 강점을 가지고 있으며,
+특히 Three.js(WebGL)·Babylon.js를 활용한 고성능 3D 웹 프론트엔드에 강점을 가지고 있으며,
+
 NeRF·3D Gaussian Splatting으로 생성된 대규모 3D 모델을 웹에 통합해 몰입감 있는 인터랙션을 구현했습니다.
 
 또한 3D 렌더링 최적화(LOD, 메쉬·텍스처 최적화)와
+
 WebSocket·WebRTC 기반 실시간 데이터 및 영상 스트리밍을 3D 환경에 결합하여
+
 디지털 트윈 기반의 실시간 시각화 경험을 제공했습니다.`}
                   </p>
                 </div>
