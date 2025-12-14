@@ -23,7 +23,7 @@ export default function ProjectsPage() {
         "목적지 정보 및 편의시설 제공",
       ],
       details: {
-        period: "2024.06 - 2024.12",
+        period: "2025.01 - 2025.03",
         team: "3명",
         role: "PM, 개발 및 3D 시각화",
         description:
@@ -52,7 +52,7 @@ export default function ProjectsPage() {
         "AI 기반 안전 크래딧 시스템",
       ],
       details: {
-        period: "2024.03 - 2024.05",
+        period: "2025.03 - 2024.06",
         team: "3명",
         role: "프론트 엔드 및 3D 시각화 개발 리드",
         description:
@@ -95,7 +95,7 @@ export default function ProjectsPage() {
       github: "https://github.com",
       highlights: ["Spot (4족 보행 로봇) , 와이어볼 로봇 통합 관제 및 제어", "고도화된 설비 진단 및 데이터 시각화", "통합 HMI 인터페이스"],
       details: {
-        period: "2023.10 - 2023.12",
+        period: "2025.7 - 2025.11",
         team: "3명",
         role: "HMI 인터페이스 개발",
         description:

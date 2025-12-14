@@ -112,7 +112,7 @@ WebSocket·WebRTC 기반 실시간 데이터 및 영상 스트리밍을 3D 환�
                   </div>
                   <div className="px-3 sm:px-4 py-1.5 sm:py-2 bg-cyan-500/10 text-cyan-500 border border-cyan-500/20 rounded-full text-xs sm:text-sm font-medium flex items-center justify-between min-w-[100px] sm:min-w-[120px]">
                     <span>C#</span>
-                    <span className="ml-2 sm:ml-3 text-xs">중상</span>
+                    <span className="ml-2 sm:ml-3 text-xs">중</span>
                   </div>
                   <div className="px-3 sm:px-4 py-1.5 sm:py-2 bg-purple-500/10 text-purple-500 border border-purple-500/20 rounded-full text-xs sm:text-sm font-medium flex items-center justify-between min-w-[100px] sm:min-w-[120px]">
                     <span>C++</span>
