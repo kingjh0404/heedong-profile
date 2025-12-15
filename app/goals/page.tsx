@@ -72,10 +72,15 @@ export default function GoalsPage() {
 
       <main className="flex-1 px-4 py-12 overflow-y-auto relative">
         <div className="max-w-7xl mx-auto relative z-10">
+          {/* Page Title */}
+          <div className="mt-6 mb-8 text-center lg:text-left">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight">앞으로의 포부</h1>
+          </div>
+
           {/* Header with Globe and Content */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-16 items-start mt-10">
-            {/* 왼쪽: 지구본 */}
-            <div className="w-full h-[400px] md:h-[500px] lg:sticky lg:top-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-10 lg:mb-16 items-start">
+            {/* 왼쪽: 지구본 (모바일에서는 제목 다음, 데스크톱에서는 왼쪽) */}
+            <div className="w-full h-[280px] md:h-[420px] lg:h-[500px] lg:sticky lg:top-20 order-1 lg:order-1">
               <Suspense
                 fallback={
                   <div className="w-full h-full flex items-center justify-center rounded-lg bg-gradient-to-b from-slate-950 to-slate-900 border border-border">
@@ -87,9 +92,8 @@ export default function GoalsPage() {
               </Suspense>
             </div>
 
-            {/* 오른쪽: 헤더 텍스트 */}
-            <div className="space-y-6 flex flex-col justify-center">
-              <h1 className="text-4xl md:text-5xl font-bold tracking-tight">앞으로의 포부</h1>
+            {/* 오른쪽: 헤더 텍스트 (모바일에서는 지구본 다음, 데스크톱에서는 오른쪽) */}
+            <div className="space-y-6 flex flex-col justify-center order-2 lg:order-2 mt-52 lg:mt-0">
               <div className="space-y-4">
                 <p className="text-base text-muted-foreground leading-relaxed">
                   저는 끊임없이 배우고 성장하는 개발자로서, 더 나은 사용자 경험을 만들기 위해 계속해서 도전하고 싶습니다. 단순히 코드를 작성하는 데 그치는 것이 아니라, 사용자가 어떤 문제를 겪고 있는지 깊이 이해하고 그 문제를 효과적으로 해결할 수 있는 방법을 찾는 개발자가 되고자 합니다. 이를 위해 최신 기술 트렌드를 꾸준히 연구하고, 실제 프로젝트에 적용하면서 기술적 역량을 넓혀가고 있습니다.

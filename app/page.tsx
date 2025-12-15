@@ -47,7 +47,10 @@ export default function Page() {
               <div className="flex flex-col gap-1.5 sm:gap-2 pt-2 sm:pt-4 text-sm sm:text-base text-foreground/80">
                 <div className="flex items-center gap-2">
                   <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-primary flex-shrink-0" />
-                  <span className="break-all">xhakxh147@gmail.com</span>
+                  <div className="break-all flex flex-col">
+                
+                    <span>shineguri404@gmail.com</span>
+                  </div>
                 </div>
                 <div className="flex items-center gap-2">
                   <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-primary flex-shrink-0" />

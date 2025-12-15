@@ -1,12 +1,12 @@
 "use client"
 
-import { useRef, Suspense } from "react"
+import { useRef, Suspense, useState, useEffect } from "react"
 import { Canvas, useFrame, useLoader } from "@react-three/fiber"
 import { OrbitControls, Stars } from "@react-three/drei"
 import { TextureLoader } from "three"
 import * as THREE from "three"
 
-function Globe() {
+function Globe({ scale = 1 }: { scale?: number }) {
   const globeRef = useRef<THREE.Mesh>(null)
 
   // 실제 지구 텍스처 로드
@@ -22,7 +22,7 @@ function Globe() {
   })
 
   return (
-    <mesh ref={globeRef}>
+    <mesh ref={globeRef} scale={[scale, scale, scale]}>
       <sphereGeometry args={[2, 64, 64]} />
       <meshStandardMaterial map={earthTexture} roughness={0.7} metalness={0.2} />
     </mesh>
@@ -30,6 +30,18 @@ function Globe() {
 }
 
 export function Globe3D() {
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768) // md breakpoint
+    }
+    
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
   return (
     <div className="relative w-full h-full min-h-[500px] rounded-lg bg-gradient-to-b from-slate-800 to-slate-700 dark:from-slate-900 dark:to-slate-800 overflow-hidden border border-border">
       <Canvas camera={{ position: [0, 0, 7], fov: 45 }} gl={{ preserveDrawingBuffer: true }}>
@@ -43,7 +55,7 @@ export function Globe3D() {
         <Stars radius={100} depth={50} count={5000} factor={4} fade speed={1} />
 
         <Suspense fallback={null}>
-          <Globe />
+          <Globe scale={isMobile ? 0.8 : 1} />
         </Suspense>
 
         <OrbitControls
