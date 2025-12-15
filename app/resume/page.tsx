@@ -1,3 +1,6 @@
+"use client"
+
+import { useEffect, useState } from "react"
 import { Card } from "@/components/ui/card"
 import { PortfolioSidebar } from "@/components/portfolio-sidebar"
 import { ResumeBackground } from "@/components/resume-background"
@@ -5,19 +8,25 @@ import Image from "next/image"
 import { BASE_PATH } from "@/lib/constants"
 
 export default function ResumePage() {
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    setIsVisible(true)
+  }, [])
+
   return (
     <div className="flex min-h-screen">
       <ResumeBackground />
       <PortfolioSidebar />
 
       <main className="flex-1 px-3 sm:px-4 py-6 sm:py-8 md:py-12 overflow-y-auto">
-        <div className="max-w-4xl mx-auto">
+        <div className={`max-w-4xl mx-auto transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           {/* Header 간소화 */}
           <div className="mb-6 sm:mb-8 md:mb-12">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 sm:mb-3 md:mb-4">이력서</h1>
           </div>
 
-          <section className="mb-6 sm:mb-8 md:mb-12">
+          <section className={`mb-6 sm:mb-8 md:mb-12 transition-all duration-700 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">프로필</h2>
             <Card className="p-4 sm:p-5 md:p-6">
               {/* 변경: 그리드 비율을 1fr_400px에서 1fr_300px로 변경하여 3D 모델 영역을 조금 줄임 */}
@@ -53,7 +62,7 @@ WebSocket·WebRTC 기반 실시간 데이터 및 영상 스트리밍을 3D 환�
             </Card>
           </section>
 
-          <section className="mb-6 sm:mb-8 md:mb-12">
+          <section className={`mb-6 sm:mb-8 md:mb-12 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-5 md:mb-6">경력</h2>
             <div className="space-y-4 sm:space-y-6 md:space-y-8">
               <div className="border-l-4 border-primary pl-3 sm:pl-4 md:pl-6 py-2">
@@ -78,7 +87,7 @@ WebSocket·WebRTC 기반 실시간 데이터 및 영상 스트리밍을 3D 환�
             </div>
           </section>
 
-          <section className="mb-6 sm:mb-8 md:mb-12">
+          <section className={`mb-6 sm:mb-8 md:mb-12 transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-5 md:mb-6">학력</h2>
             <div className="border-l-4 border-primary pl-3 sm:pl-4 md:pl-6 py-2">
               <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-1 sm:mb-2 break-keep">한동대학교 (Handong Global University)</h3>
@@ -87,7 +96,7 @@ WebSocket·WebRTC 기반 실시간 데이터 및 영상 스트리밍을 3D 환�
             </div>
           </section>
 
-          <section className="mb-6 sm:mb-8 md:mb-12">
+          <section className={`mb-6 sm:mb-8 md:mb-12 transition-all duration-700 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-5 md:mb-6 flex items-center">
               Skills
               <div className="h-1 w-12 sm:w-16 md:w-20 bg-primary ml-2 sm:ml-3 md:ml-4 rounded-full"></div>
@@ -110,8 +119,8 @@ WebSocket·WebRTC 기반 실시간 데이터 및 영상 스트리밍을 3D 환�
                     <span>TypeScript</span>
                     <span className="ml-2 sm:ml-3 text-xs">중</span>
                   </div>
-                  <div className="px-3 sm:px-4 py-1.5 sm:py-2 bg-cyan-500/10 text-cyan-500 border border-cyan-500/20 rounded-full text-xs sm:text-sm font-medium flex items-center justify-between min-w-[100px] sm:min-w-[120px]">
-                    <span>C#</span>
+                  <div className="px-3 sm:px-4 py-1.5 sm:py-2 bg-purple-500/10 text-purple-500 border border-purple-500/20 rounded-full text-xs sm:text-sm font-medium flex items-center justify-between min-w-[100px] sm:min-w-[120px]">
+                    <span>C</span>
                     <span className="ml-2 sm:ml-3 text-xs">중</span>
                   </div>
                   <div className="px-3 sm:px-4 py-1.5 sm:py-2 bg-purple-500/10 text-purple-500 border border-purple-500/20 rounded-full text-xs sm:text-sm font-medium flex items-center justify-between min-w-[100px] sm:min-w-[120px]">
@@ -152,9 +161,9 @@ WebSocket·WebRTC 기반 실시간 데이터 및 영상 스트리밍을 3D 환�
               <div>
                 <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 sm:mb-3 border-l-4 border-primary pl-2 sm:pl-3">Framework</h3>
                 <div className="flex flex-wrap gap-2 sm:gap-3">
-                  <div className="px-3 sm:px-4 py-1.5 sm:py-2 bg-purple-500/10 text-purple-500 border border-purple-500/20 rounded-full text-xs sm:text-sm font-medium flex items-center justify-between min-w-[100px] sm:min-w-[120px]">
-                    <span>Next.js</span>
-                    <span className="ml-2 sm:ml-3 text-xs">중</span>
+                  <div className="px-3 sm:px-4 py-1.5 sm:py-2 bg-blue-500/10 text-blue-500 border border-blue-500/20 rounded-full text-xs sm:text-sm font-medium flex items-center justify-between min-w-[100px] sm:min-w-[120px]">
+                    <span>Node.js</span>
+                    <span className="ml-2 sm:ml-3 text-xs">상</span>
                   </div>
                   <div className="px-3 sm:px-4 py-1.5 sm:py-2 bg-cyan-500/10 text-cyan-500 border border-cyan-500/20 rounded-full text-xs sm:text-sm font-medium flex items-center justify-between min-w-[100px] sm:min-w-[120px]">
                     <span>Express.js</span>
@@ -163,6 +172,10 @@ WebSocket·WebRTC 기반 실시간 데이터 및 영상 스트리밍을 3D 환�
                   <div className="px-3 sm:px-4 py-1.5 sm:py-2 bg-cyan-500/10 text-cyan-500 border border-cyan-500/20 rounded-full text-xs sm:text-sm font-medium flex items-center justify-between min-w-[100px] sm:min-w-[120px]">
                     <span>REST API</span>
                     <span className="ml-2 sm:ml-3 text-xs">중상</span>
+                  </div>
+                  <div className="px-3 sm:px-4 py-1.5 sm:py-2 bg-purple-500/10 text-purple-500 border border-purple-500/20 rounded-full text-xs sm:text-sm font-medium flex items-center justify-between min-w-[100px] sm:min-w-[120px]">
+                    <span>Next.js</span>
+                    <span className="ml-2 sm:ml-3 text-xs">중</span>
                   </div>
                   <div className="px-3 sm:px-4 py-1.5 sm:py-2 bg-purple-500/10 text-purple-500 border border-purple-500/20 rounded-full text-xs sm:text-sm font-medium flex items-center justify-between min-w-[100px] sm:min-w-[120px]">
                     <span>flask</span>
@@ -175,14 +188,6 @@ WebSocket·WebRTC 기반 실시간 데이터 및 영상 스트리밍을 3D 환�
               <div>
                 <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 sm:mb-3 border-l-4 border-primary pl-2 sm:pl-3">Tools</h3>
                 <div className="flex flex-wrap gap-2 sm:gap-3">
-                  <div className="px-3 sm:px-4 py-1.5 sm:py-2 bg-cyan-500/10 text-cyan-500 border border-cyan-500/20 rounded-full text-xs sm:text-sm font-medium flex items-center justify-between min-w-[100px] sm:min-w-[120px]">
-                    <span>Git</span>
-                    <span className="ml-2 sm:ml-3 text-xs">중상</span>
-                  </div>
-                  <div className="px-3 sm:px-4 py-1.5 sm:py-2 bg-purple-500/10 text-purple-500 border border-purple-500/20 rounded-full text-xs sm:text-sm font-medium flex items-center justify-between min-w-[110px] sm:min-w-[140px]">
-                    <span>Notion</span>
-                    <span className="ml-2 sm:ml-3 text-xs">중</span>
-                  </div>
                   <div className="px-3 sm:px-4 py-1.5 sm:py-2 bg-blue-500/10 text-blue-500 border border-blue-500/20 rounded-full text-xs sm:text-sm font-medium flex items-center justify-between min-w-[100px] sm:min-w-[120px]">
                     <span>Cursor</span>
                     <span className="ml-2 sm:ml-3 text-xs">상</span>
@@ -194,6 +199,14 @@ WebSocket·WebRTC 기반 실시간 데이터 및 영상 스트리밍을 3D 환�
                   <div className="px-3 sm:px-4 py-1.5 sm:py-2 bg-blue-500/10 text-blue-500 border border-blue-500/20 rounded-full text-xs sm:text-sm font-medium flex items-center justify-between min-w-[110px] sm:min-w-[140px]">
                     <span>Confluence</span>
                     <span className="ml-2 sm:ml-3 text-xs">상</span>
+                  </div>
+                  <div className="px-3 sm:px-4 py-1.5 sm:py-2 bg-cyan-500/10 text-cyan-500 border border-cyan-500/20 rounded-full text-xs sm:text-sm font-medium flex items-center justify-between min-w-[100px] sm:min-w-[120px]">
+                    <span>Git</span>
+                    <span className="ml-2 sm:ml-3 text-xs">중상</span>
+                  </div>
+                  <div className="px-3 sm:px-4 py-1.5 sm:py-2 bg-purple-500/10 text-purple-500 border border-purple-500/20 rounded-full text-xs sm:text-sm font-medium flex items-center justify-between min-w-[110px] sm:min-w-[140px]">
+                    <span>Notion</span>
+                    <span className="ml-2 sm:ml-3 text-xs">중</span>
                   </div>
                   <div className="px-3 sm:px-4 py-1.5 sm:py-2 bg-purple-500/10 text-purple-500 border border-purple-500/20 rounded-full text-xs sm:text-sm font-medium flex items-center justify-between min-w-[100px] sm:min-w-[120px]">
                     <span>Figma</span>
@@ -209,7 +222,7 @@ WebSocket·WebRTC 기반 실시간 데이터 및 영상 스트리밍을 3D 환�
           </section>
 
           {/* Certifications */}
-          <section>
+          <section className={`transition-all duration-700 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-5 md:mb-6">자격증</h2>
             <Card className="p-4 sm:p-5 md:p-6">
               <ul className="space-y-2 sm:space-y-3">

@@ -1,3 +1,6 @@
+"use client"
+
+import { useEffect, useState } from "react"
 import { Card } from "@/components/ui/card"
 import { FileText, Briefcase, Pen, Target, Mail, Phone, ArrowRight } from "lucide-react"
 import Link from "next/link"
@@ -6,6 +9,12 @@ import { ThreeDBackground } from "@/components/3d-background"
 import { BASE_PATH } from "@/lib/constants"
 
 export default function Page() {
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    setIsVisible(true)
+  }, [])
+
   return (
     <div className="min-h-screen">
       <ThreeDBackground />
@@ -18,10 +27,10 @@ export default function Page() {
           <div className="absolute bottom-10 right-5 sm:bottom-20 sm:right-10 w-64 h-64 sm:w-96 sm:h-96 bg-secondary/10 rounded-full blur-3xl" />
         </div>
 
-        <div className="max-w-7xl w-full">
+        <div className={`max-w-7xl w-full transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           {/* Left: Text Content */}
           <div className="grid md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
-            <div className="space-y-4 sm:space-y-6">
+            <div className={`space-y-4 sm:space-y-6 transition-all duration-700 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
               <div className="space-y-2 sm:space-y-4">
                 <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
                   <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">
@@ -60,7 +69,7 @@ export default function Page() {
             </div>
 
             {/* Right: Profile Image */}
-            <div className="flex justify-center md:justify-end md:pr-8 order-first md:order-last">
+            <div className={`flex justify-center md:justify-end md:pr-8 order-first md:order-last transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
               <div className="relative w-40 h-52 sm:w-48 sm:h-64 md:w-56 md:h-72 overflow-hidden rounded-lg shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 group">
                 <Image
                   src={`${BASE_PATH}/jh.png`}
@@ -74,7 +83,7 @@ export default function Page() {
           </div>
 
           {/* Navigation Cards */}
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 pt-8 sm:pt-12 md:pt-20">
+          <div className={`grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 pt-8 sm:pt-12 md:pt-20 transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             <Link href="/resume" className="group">
               <Card className="p-4 sm:p-6 md:p-8 hover:shadow-xl hover:shadow-primary/20 transition-all duration-300 cursor-pointer h-full border-2 hover:border-primary/50 hover:-translate-y-1">
                 <div className="flex flex-col items-center gap-2 sm:gap-3 md:gap-4 text-center">

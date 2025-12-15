@@ -1,4 +1,6 @@
-import { Suspense } from "react"
+"use client"
+
+import { Suspense, useEffect, useState } from "react"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Target, Code, Users, Rocket, TrendingUp, Lightbulb, Globe, Network } from "lucide-react"
@@ -7,6 +9,11 @@ import { ResumeBackground } from "@/components/resume-background"
 import { Globe3D } from "@/components/3d-globe"
 
 export default function GoalsPage() {
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    setIsVisible(true)
+  }, [])
   const emphasisPoints = [
     {
       icon: Globe,
@@ -71,14 +78,14 @@ export default function GoalsPage() {
       <PortfolioSidebar />
 
       <main className="flex-1 px-4 py-12 overflow-y-auto relative">
-        <div className="max-w-7xl mx-auto relative z-10">
+        <div className={`max-w-7xl mx-auto relative z-10 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           {/* Page Title */}
-          <div className="mt-6 mb-8 text-center lg:text-left">
+          <div className={`mt-6 mb-8 text-center lg:text-left transition-all duration-700 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight">앞으로의 포부</h1>
           </div>
 
           {/* Header with Globe and Content */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-10 lg:mb-16 items-start">
+          <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-10 lg:mb-16 items-start transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             {/* 왼쪽: 지구본 (모바일에서는 제목 다음, 데스크톱에서는 왼쪽) */}
             <div className="w-full h-[280px] md:h-[420px] lg:h-[500px] lg:sticky lg:top-20 order-1 lg:order-1">
               <Suspense
@@ -112,7 +119,7 @@ export default function GoalsPage() {
           </div>
 
           {/* 세계를 향한 목표 */}
-          <div className="space-y-6 mb-12">
+          <div className={`space-y-6 mb-12 transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             <h2 className="text-3xl font-bold mb-8">세계를 향한 목표</h2>
             <div className="grid gap-6 md:grid-cols-2">
               {emphasisPoints.map((point, index) => (

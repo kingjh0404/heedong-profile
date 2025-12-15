@@ -1,8 +1,17 @@
+"use client"
+
+import { useEffect, useState } from "react"
 import { Card } from "@/components/ui/card"
 import { PortfolioSidebar } from "@/components/portfolio-sidebar"
 import { ResumeBackground } from "@/components/resume-background"
 
 export default function CoverLetterPage() {
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    setIsVisible(true)
+  }, [])
+
   return (
     <div className="flex min-h-screen relative">
       <ResumeBackground />
@@ -10,14 +19,14 @@ export default function CoverLetterPage() {
       <PortfolioSidebar />
 
       <main className="flex-1 px-4 py-12 overflow-y-auto relative z-10">
-        <div className="max-w-3xl mx-auto">
+        <div className={`max-w-3xl mx-auto transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           {/* Header */}
-          <div className="mb-12">
+          <div className={`mb-12 transition-all duration-700 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">자기소개서</h1>
           </div>
 
           {/* Cover Letter Content */}
-          <Card className="p-8 md:p-12">
+          <Card className={`p-8 md:p-12 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             <div className="space-y-8">
               <div className="space-y-4 text-lg leading-relaxed text-muted-foreground break-keep">
                 <p>

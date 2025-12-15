@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import { Card } from "@/components/ui/card"
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
 import Image from "next/image"
@@ -8,6 +9,11 @@ import { ResumeBackground } from "@/components/resume-background"
 import { BASE_PATH } from "@/lib/constants"
 
 export default function ProjectsPage() {
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    setIsVisible(true)
+  }, [])
   const projects = [
     {
       title: "RIST 본원 방문객을 위한 실내 3D 안내 솔루션",
@@ -227,15 +233,15 @@ export default function ProjectsPage() {
       <PortfolioSidebar />
 
       <main className="flex-1 px-3 sm:px-4 py-6 sm:py-8 md:py-12 overflow-y-auto relative z-10">
-        <div className="max-w-6xl mx-auto">
+        <div className={`max-w-6xl mx-auto transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           {/* Header */}
-          <div className="mb-6 sm:mb-8 md:mb-12">
+          <div className={`mb-6 sm:mb-8 md:mb-12 transition-all duration-700 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 sm:mb-3 md:mb-4">프로젝트</h1>
             <p className="text-sm sm:text-base md:text-lg text-muted-foreground">제가 진행한 주요 프로젝트들을 소개합니다.</p>
           </div>
 
           {/* Projects Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
+          <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             {projects.map((project, index) => (
               <Dialog key={index}>
                 <DialogTrigger asChild>
@@ -287,7 +293,7 @@ export default function ProjectsPage() {
                 <DialogContent className="max-w-[1100px] w-[95vw] sm:w-[90vw] max-h-[95vh] sm:max-h-[90vh] overflow-y-auto custom-scrollbar border-none rounded-sm break-keep p-4 sm:p-6 md:p-10">
                   <div className="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
                     {/* 왼쪽: 사진, 기간, 팀 구성, 역할, 주요 기능, 기술 스택 */}
-                    <div className="space-y-6">
+                    <div className="space-y-6 animate-fade-in-up" style={{ animationDelay: '0.1s', animationFillMode: 'both' }}>
                       {/* Project Image */}
                       <div className="relative h-48 sm:h-64 md:h-72 bg-muted rounded-lg overflow-hidden">
                         <Image
@@ -355,7 +361,7 @@ export default function ProjectsPage() {
                     </div>
 
                     {/* 오른쪽: 프로젝트 제목, 설명, 내 역할, 성과 */}
-                    <div className="space-y-4 sm:space-y-6">
+                    <div className="space-y-4 sm:space-y-6 animate-fade-in-up" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
                       {/* Title */}
                       <h2 className="text-xl sm:text-2xl font-bold break-keep">{project.title}</h2>
 
