@@ -160,7 +160,7 @@ export default function ProjectsPage() {
       details: {
         period: "2025.08 - 2025.11",
         team: "3명",
-        role: "프론트엔드 개발",
+        role: "프론트엔드",
         contributions: [
           "HUSKY 로봇 관제 메인 화면 및 실시간 위치 표시 UI 개발",
           "원격 조종 및 자율 미션 설정 인터페이스 구현",
@@ -206,7 +206,7 @@ export default function ProjectsPage() {
       details: {
         period: "2025.08 - 2025.12",
         team: "2명",
-        role: "프론트엔드 개발",
+        role: "프론트엔드",
         contributions: [
           "기차 단열커버 상태를 한눈에 볼 수 있는 실시간 대시보드 UI 설계",
           "WebSocket/REST 기반 실시간 상태·이력 데이터 시각화 컴포넌트 개발",
