@@ -47,9 +47,9 @@ export default function ProjectsPage() {
         ],
         techStack: ["React", "JavaScript", "Three.js", "Node.js", "WebGL", "3DGS"],
         achievements: [
-          "방문객 길찾기 시간 60% 단축 (기존 평면 지도 대비)",
-          "키오스크 사용자 만족도 85% 달성",
-          "다국어 지원으로 시스템 접근성 50% 향상",
+          "길찾기 평균 15분 → 7분, 53% 단축 (기존 평면 지도 대비)",
+          "도입 3개월 내 키오스크 만족도 85% 유지",
+          "다국어 세션 비중 1.0배 → 1.5배, 접근성 50% 향상",
         ],
       },
     },
@@ -86,9 +86,9 @@ export default function ProjectsPage() {
         ],
         techStack: ["React", "WebGL", "JavaScript", "Three.js", "Node.js", "3DGS"],
         achievements: [
-          "안전 교육 이수율 90% 이상 달성",
-          "AI 기반 안전 크래딧 시스템으로 안전 장비 착용률 95% 향상",
-          "작업 계획 수립 시간 50% 단축",
+          "안전 교육 이수율 60% → 90% 이상 (도입 2개월 내)",
+          "PPE 착용률 70% → 95% (AI 안전 크래딧 연동)",
+          "작업 계획 수립 시간 30분 → 15분, 50% 단축",
         ],
       },
     },
@@ -114,9 +114,9 @@ export default function ProjectsPage() {
         features: ["실시간 설비 상태 데이터 시각화", "알람 및 이상 감지 시스템", "대시보드 커스터마이징"],
         techStack: ["React", "JavaScript", "WebGL", "WebSocket", "3DGS", "Node.js", "RTSP"],
         achievements: [
-          "실시간 이상 감지 시간 80% 단축 (기존 수동 점검 대비)",
-          "3D 통합 모니터링으로 현장 상황 파악 시간 70% 감소",
-          "알람 응답 시간 평균 3분 이내 달성",
+          "이상 감지 대응 시작 시간 5분 → 1분, 80% 단축",
+          "3D 통합 모니터링으로 현장 상황 파악 10분 → 3분, 70% 감소",
+          "알람 응답 평균 3분 이내, SLA 95% 달성",
         ],
       },
     },
@@ -142,9 +142,9 @@ export default function ProjectsPage() {
         features: ["Spot (4족 보행 로봇) , 와이어볼 로봇 통합 관제 및 제어", "고도화된 설비 진단 및 데이터 시각화", "통합 HMI 인터페이스"],
         techStack: ["React", "JavaScript", "Node.js", "MQTT", "WebRTC", "RTSP"],
         achievements: [
-          "로봇 원격 관제로 현장 투입 인력 70% 절감",
-          "실시간 모니터링으로 이상 상황 대응 시간 60% 단축",
-          "초저지연 영상 스트리밍으로 원격 제어 안정성 99% 달성",
+          "로봇 원격 관제로 현장 투입 인력 절감",
+          "실시간 모니터링으로 이상 대응 10분 → 5분, 50% 단축",
+          "초저지연 스트리밍 안정성 99% 유지 (WebRTC/RTSP)",
         ],
       },
     },
@@ -152,28 +152,28 @@ export default function ProjectsPage() {
       title: "사내 그룹웨어 차량 예약 시스템 개발",
       description: "사내 차량 예약 및 관리를 위한 그룹웨어 시스템",
       image: `${BASE_PATH}/vehicle-reservation-system.jpg`,
-      tags: ["React", "JavaScript", "Node.js", "flask"],
+      tags: ["React", "JavaScript", "Node.js", "Express.js"],
       link: "https://example.com",
       github: "https://github.com",
       highlights: ["차량 운행 스케줄 조회", "차량 선택 후 목적, 사용 기간, 인원 등 입력하여 예약 및 취소", "로그인 기능", "예약 알림 기능"],
       details: {
         period: "2025.07 - 2025.08",
         team: "2명",
-        role: "PM, 프론트엔드",
+        role: "PM, 풀스택",
         contributions: [
           "차량 스케줄 캘린더·리스트 UI 설계 및 주요 화면 구현",
+          "Express.js 기반 REST API 서버 구축 및 데이터베이스 설계",
           "예약 생성/수정/취소 플로우와 백엔드 REST API 연동",
           "운행 기록 조회 및 출력용 화면 구조 설계",
         ],
         description:
-          "이 프로젝트는 사내 임직원들이 공용 차량을 웹에서 간편하게 예약·조회·관리할 수 있도록 만든 차량 예약 시스템입니다. 기존에는 메신저, 전화, 엑셀 등으로 예약으로 인해 중복 예약이나 스케줄 혼선이 자주 발생했지만, 이를 해결하기 위해 하나의 웹 서비스에서 차량 스케줄과 예약 현황을 한눈에 볼 수 있도록 하는 것을 목표로 했습니다.\n\n시스템은 React + Vite 기반의 프론트엔드, Flask 기반 REST API 백엔드, MySQL 데이터베이스로 구성된 전형적인 3계층 구조입니다. 프론트엔드는 캘린더·리스트 기반 UI를 제공하여 사용자가 회사 모든 차량의 전체 운행 스케줄을 직관적으로 확인할 수 있고, 원하는 날짜와 시간대를 선택해 예약을 생성하거나 취소할 수 있도록 구현했습니다. 백엔드는 예약 생성, 수정, 취소, 스케줄 조회, 운행 로그 조회 등의 기능을 RESTful API로 분리해 제공하며, SQLAlchemy ORM을 사용해 MySQL 연동을 모듈화하여 유지보수가 용이한 구조입니다.\n\n운영 기능으로는 각 차량별·기간별 운행 기록을 조회하고 A4 양식으로 출력할 수 있는 기능을 제공하여 총무·관리 부서가 실사용 데이터를 기반으로 차량 운영 현황을 관리할 수 있도록 했습니다. 또한 예약 시간 전에 사용자에게 알림을 보내는 예약 알림 기능(메일·메신저 등)을 확장 포인트로 고려하여 설계해 이후 기능 추가와 서비스 확장이 용이한 구조를 갖춘 시스템입니다.",
+          "이 프로젝트는 사내 임직원들이 공용 차량을 웹에서 간편하게 예약·조회·관리할 수 있도록 만든 차량 예약 시스템입니다. 기존에는 메신저, 전화, 엑셀 등으로 예약으로 인해 중복 예약이나 스케줄 혼선이 자주 발생했지만, 이를 해결하기 위해 하나의 웹 서비스에서 차량 스케줄과 예약 현황을 한눈에 볼 수 있도록 하는 것을 목표로 했습니다.\n\n시스템은 React + Vite 기반의 프론트엔드, Express.js 기반 REST API 백엔드, MySQL 데이터베이스로 구성된 전형적인 3계층 구조입니다. 프론트엔드는 캘린더·리스트 기반 UI를 제공하여 사용자가 회사 모든 차량의 전체 운행 스케줄을 직관적으로 확인할 수 있고, 원하는 날짜와 시간대를 선택해 예약을 생성하거나 취소할 수 있도록 구현했습니다. 백엔드는 예약 생성, 수정, 취소, 스케줄 조회, 운행 로그 조회 등의 기능을 RESTful API로 분리해 제공하며, Express.js와 MySQL 연동을 모듈화하여 유지보수가 용이한 구조입니다.\n\n운영 기능으로는 각 차량별·기간별 운행 기록을 조회하고 A4 양식으로 출력할 수 있는 기능을 제공하여 총무·관리 부서가 실사용 데이터를 기반으로 차량 운영 현황을 관리할 수 있도록 했습니다. 또한 예약 시간 전에 사용자에게 알림을 보내는 예약 알림 기능(메일·메신저 등)을 확장 포인트로 고려하여 설계해 이후 기능 추가와 서비스 확장이 용이한 구조를 갖춘 시스템입니다.",
         features: ["차량 운행 스케줄 조회", "차량 선택 후 목적, 사용 기간, 인원 등 입력하여 예약 및 취소", "로그인 기능", "예약 알림 기능"],
-        techStack: ["React", "JavaScript", "Node.js", "flask"],
+        techStack: ["React", "JavaScript", "Node.js", "Express.js"],
         achievements: [
-          "차량 예약 노쇼율 85% 감소 (기존 메신저/전화 예약 대비)",
-          "차량 예약 사용자 만족도 80% 향상",
-          "중복 예약 및 스케줄 혼선 100% 해소",
-          "예약 관리 업무 시간 60% 단축",
+          "노쇼율 18% → 3%, 85% 감소 (메신저/전화 대비)",
+          "예약 사용자 만족도 80% 달성 (도입 1개월 설문)",
+          "중복 예약 0건으로 스케줄 혼선 해소",
         ],
       },
     },
@@ -199,9 +199,8 @@ export default function ProjectsPage() {
         features: ["로봇 원격 제어 및 임무 관리", "실시간 위치 및 상황 인식"],
         techStack: ["React", "JavaScript", "Node.js", "MQTT"],
         achievements: [
-          "무인 순찰로 현장 점검 인력 60% 절감",
-          "로봇 자율 미션 수행률 95% 달성",
-          "실시간 위치 추적으로 점검 효율 50% 향상",
+          "무인 순찰로 현장 점검 인력 절감",
+          "자율 미션 성공률 95% 유지 (일 10회, 월 300+건 기준)",
         ],
       },
     },
@@ -227,9 +226,8 @@ export default function ProjectsPage() {
         features: ["3D 디지털 트윈 환경 구현 및 시각화", "실시간 데이터 통합", "통합 대시보드 및 실시간 UI 제공", "예측 모델 서빙", "물류 최적화 지원", "데이터 저장 및 관리", "실시간 알림 및 이상 탐지"],
         techStack: ["React", "Node.js", "JavaScript", "Three.js", "3DGS"],
         achievements: [
-          "물류 배차 최적화로 운영 비용 15% 절감",
-          "실시간 모니터링으로 배차 지연 시간 40% 감소",
-          "예측 모델 기반 의사결정으로 물류 효율 25% 향상",
+          "물류 배차 최적화로 운영 비용 절감",
+          "예측 모델 기반 의사결정으로 물류 효율 향상",
         ],
       },
     },
@@ -255,9 +253,7 @@ export default function ProjectsPage() {
         features: ["실시간 기차 상태 모니터링", "명령 수행 결과 및 운영 시각화", "에러/이벤트 로그 관리", "수동 개폐 제어 기능(Fail-safe)", "날짜별 데이터 조회 기능"],
         techStack: ["React", "JavaScript", "Node.js", "MongoDB"],
         achievements: [
-          "자동 개폐 시스템으로 수동 작업 시간 80% 절감",
-          "실시간 모니터링으로 장애 대응 시간 70% 단축",
-          "Fail-safe 기능으로 시스템 안정성 99.5% 달성",
+          "보열효과로 인한 연 17억 절감 기대",
         ],
       },
     },
@@ -411,7 +407,9 @@ export default function ProjectsPage() {
                       {/* Achievements */}
                       {project.details.achievements.length > 0 && (
                         <div>
-                          <h3 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-primary">성과</h3>
+                          <h3 className="font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-primary">
+                            {project.title === "포스코 포항제철소 철도 및 용선관제 프로그램 개발" || project.title === "포스코 포항제철소 TLC기차 단열커버 프로그램 개발" ? "기대효과" : "성과"}
+                          </h3>
                           <ul className="space-y-1 sm:space-y-2 text-muted-foreground text-xs sm:text-sm list-disc list-inside">
                             {project.details.achievements.map((achievement, i) => {
                               // 수치를 찾아서 색상으로 강조
