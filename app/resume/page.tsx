@@ -39,7 +39,7 @@ React, Node.js, TypeScript, JavaScript를 기반으로 산업 현장의 니즈�
 
 특히 Three.js(WebGL)·Babylon.js를 활용한 고성능 3D 웹 프론트엔드에 강점을 가지고 있으며,
 
-NeRF·3D Gaussian Splatting으로 생성된 대규모 3D 모델을 웹에 통합해 몰입감 있는 인터랙션을 구현했습니다.
+3D Gaussian Splatting으로 생성된 대규모 3D 모델을 웹에 통합해 몰입감 있는 인터랙션을 구현했습니다.
 
 또한 3D 렌더링 최적화(LOD, 메쉬·텍스처 최적화)와
 
@@ -111,16 +111,16 @@ WebSocket·WebRTC 기반 실시간 데이터 및 영상 스트리밍을 3D 환�
                     <span>Javascript</span>
                     <span className="ml-2 sm:ml-3 text-xs">상</span>
                   </div>
+                  <div className="px-3 sm:px-4 py-1.5 sm:py-2 bg-cyan-500/10 text-cyan-500 border border-cyan-500/20 rounded-full text-xs sm:text-sm font-medium flex items-center justify-between min-w-[100px] sm:min-w-[120px]">
+                    <span>C</span>
+                    <span className="ml-2 sm:ml-3 text-xs">중상</span>
+                  </div>
                   <div className="px-3 sm:px-4 py-1.5 sm:py-2 bg-purple-500/10 text-purple-500 border border-purple-500/20 rounded-full text-xs sm:text-sm font-medium flex items-center justify-between min-w-[100px] sm:min-w-[120px]">
                     <span>Python</span>
                     <span className="ml-2 sm:ml-3 text-xs">중</span>
                   </div>
                   <div className="px-3 sm:px-4 py-1.5 sm:py-2 bg-purple-500/10 text-purple-500 border border-purple-500/20 rounded-full text-xs sm:text-sm font-medium flex items-center justify-between min-w-[100px] sm:min-w-[120px]">
                     <span>TypeScript</span>
-                    <span className="ml-2 sm:ml-3 text-xs">중</span>
-                  </div>
-                  <div className="px-3 sm:px-4 py-1.5 sm:py-2 bg-purple-500/10 text-purple-500 border border-purple-500/20 rounded-full text-xs sm:text-sm font-medium flex items-center justify-between min-w-[100px] sm:min-w-[120px]">
-                    <span>C</span>
                     <span className="ml-2 sm:ml-3 text-xs">중</span>
                   </div>
                   <div className="px-3 sm:px-4 py-1.5 sm:py-2 bg-purple-500/10 text-purple-500 border border-purple-500/20 rounded-full text-xs sm:text-sm font-medium flex items-center justify-between min-w-[100px] sm:min-w-[120px]">
