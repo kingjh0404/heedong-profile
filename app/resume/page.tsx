@@ -35,7 +35,7 @@ export default function ResumePage() {
                   <p className="text-sm sm:text-base md:text-lg leading-relaxed break-keep whitespace-pre-line">
                     {`저는 프론트엔드 중심의 풀스택 개발자로,
 
-React, Node.js, TypeScript, JavaScript를 기반으로 산업 현장의 니즈를 반영한 웹 애플리케이션을 개발해왔습니다.
+React, Node.js, Express.js, TypeScript, JavaScript를 기반으로 산업 현장의 니즈를 반영한 웹 애플리케이션을 개발해왔습니다.
 
 특히 Three.js(WebGL)·Babylon.js를 활용한 고성능 3D 웹 프론트엔드에 강점을 가지고 있으며,
 

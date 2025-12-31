@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { Card } from "@/components/ui/card"
-import { FileText, Briefcase, Pen, Target, Mail, Phone, ArrowRight } from "lucide-react"
+import { FileText, Briefcase, Target, Mail, Phone, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { ThreeDBackground } from "@/components/3d-background"
@@ -63,7 +63,7 @@ export default function Page() {
                 </div>
                 <div className="flex items-center gap-2">
                   <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-primary flex-shrink-0" />
-                  <span>010-4793-9109</span>
+                  <span>010-5933-1077</span>
                 </div>
               </div>
             </div>
@@ -83,7 +83,7 @@ export default function Page() {
           </div>
 
           {/* Navigation Cards */}
-          <div className={`grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 pt-8 sm:pt-12 md:pt-20 transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+          <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 pt-8 sm:pt-12 md:pt-20 transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             <Link href="/resume" className="group">
               <Card className="p-4 sm:p-6 md:p-8 hover:shadow-xl hover:shadow-primary/20 transition-all duration-300 cursor-pointer h-full border-2 hover:border-primary/50 hover:-translate-y-1">
                 <div className="flex flex-col items-center gap-2 sm:gap-3 md:gap-4 text-center">
@@ -106,19 +106,6 @@ export default function Page() {
                   <h3 className="text-base sm:text-lg md:text-xl font-bold">프로젝트</h3>
                   <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">주요 프로젝트 목록</p>
                   <ArrowRight className="h-3 w-3 sm:h-4 sm:w-4 text-secondary mt-1 sm:mt-2 group-hover:translate-x-1 transition-transform" />
-                </div>
-              </Card>
-            </Link>
-
-            <Link href="/cover-letter" className="group">
-              <Card className="p-4 sm:p-6 md:p-8 hover:shadow-xl hover:shadow-primary/20 transition-all duration-300 cursor-pointer h-full border-2 hover:border-primary/50 hover:-translate-y-1">
-                <div className="flex flex-col items-center gap-2 sm:gap-3 md:gap-4 text-center">
-                  <div className="p-3 sm:p-4 md:p-5 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/10 group-hover:from-primary/30 group-hover:to-primary/20 transition-all duration-300">
-                    <Pen className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-primary" />
-                  </div>
-                  <h3 className="text-base sm:text-lg md:text-xl font-bold">자기소개서</h3>
-                  <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">저를 소개합니다</p>
-                  <ArrowRight className="h-3 w-3 sm:h-4 sm:w-4 text-primary mt-1 sm:mt-2 group-hover:translate-x-1 transition-transform" />
                 </div>
               </Card>
             </Link>

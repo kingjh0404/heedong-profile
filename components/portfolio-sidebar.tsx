@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { FileText, FolderOpen, Target, Home, FileEdit } from "lucide-react"
+import { FileText, FolderOpen, Target, Home } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
@@ -13,7 +13,6 @@ export function PortfolioSidebar() {
     { href: "/", label: "메인", icon: Home },
     { href: "/resume", label: "이력서", icon: FileText },
     { href: "/projects", label: "프로젝트", icon: FolderOpen },
-    { href: "/cover-letter", label: "자기소개서", icon: FileEdit },
     { href: "/goals", label: "앞으로의 포부", icon: Target },
   ]
 
